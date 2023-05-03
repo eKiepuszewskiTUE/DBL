@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/ConveyorBelt.cs" />
+    <Compile Include="Assets/Windmill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/QS/QS-Textures-Grass-v1/Documentation/Readme.txt" />
