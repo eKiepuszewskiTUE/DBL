@@ -42,6 +42,15 @@ def chceckIfDisk(lux, prev_lux):
             return True
         return False
 
+def whatColorDisk(lux):
+    if (type(lux) == float):
+        upperTheshold = 200
+        lowerTheshold = 75
+        if (lux > upperTheshold):
+            return "white"
+        elif (lux < lowerTheshold):
+            return "black"
+
 def main():
     sensor = adafruit_tcs34725.TCS34725(board.I2C())
     sensor.gain = 60 # Change sensor gain to 1, 4, 16, or 60
@@ -67,6 +76,10 @@ def main():
 
         print_text(1, 0, "Counter: " + str(counter))
         print(counter)
+
+        print_text(2, 0, "Disk: " + str(whatColorDisk(lux))
+        print(whatColorDisk(lux))
+
 
         # Delay for a second and repeat.
         time.sleep(0.1)
