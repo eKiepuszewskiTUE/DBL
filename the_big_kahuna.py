@@ -77,7 +77,7 @@ def main():
         print_text(1, 0, "Counter: " + str(counter))
         print(counter)
 
-        print_text(2, 0, "Disk: " + str(whatColorDisk(lux))
+        print_text(2, 0, "Disk: " + str(whatColorDisk(lux)))
         print(whatColorDisk(lux))
 
 
