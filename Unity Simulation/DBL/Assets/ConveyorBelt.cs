@@ -32,7 +32,7 @@ public class ConveyorBelt : MonoBehaviour
         direction = transform.forward;
         for (int i = 0; i < onBelt.Count; i++)
         {
-            onBelt[i].gameObject.GetComponent<Rigidbody>().AddForce(speed * direction);
+            onBelt[i].gameObject.GetComponent<Rigidbody>().velocity = (speed * direction);
         }
     }
 

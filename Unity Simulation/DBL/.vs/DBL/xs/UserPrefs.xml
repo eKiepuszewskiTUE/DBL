@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{036D5603-37A3-99F0-30E3-EC18EF0BC1C2}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Windmill.cs">
     <Files>
-      <File FileName="Assets/ConveyorBelt.cs" Line="20" Column="41" />
-      <File FileName="Assets/Windmill.cs" Line="20" Column="59" />
+      <File FileName="Assets/ConveyorBelt.cs" Line="30" Column="31" />
+      <File FileName="Assets/Windmill.cs" Line="22" Column="73" />
+      <File FileName="Assets/Sensor.cs" Line="24" Column="51" />
+      <File FileName="Assets/Splitter.cs" Line="41" Column="6" />
+      <File FileName="Assets/Spawner.cs" Line="24" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="746aaefa-97b5-4106-9768-38fa0c081c10" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1b262d57-4d87-4c59-936c-6f7edb5c5f5a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

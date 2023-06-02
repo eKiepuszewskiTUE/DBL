@@ -13,10 +13,14 @@ public class Windmill : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 rotation = new Vector3(0f, 1f, 0f) * rotationSpeed * Time.deltaTime;
-        rb.AddRelativeTorque(rotation, ForceMode.Impulse);
+        //Vector3 rotation = new Vector3(0f, 1f, 0f) * rotationSpeed * 500f * Time.deltaTime;
+
+        rb.angularVelocity = new Vector3(0f, 0f, 1f) * rotationSpeed * 2f * Time.deltaTime;
+        //rb.AddRelativeTorque(rotation, ForceMode.Impulse);
     }
+    
 }

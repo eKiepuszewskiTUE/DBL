@@ -345,6 +345,9 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/ConveyorBelt.cs"
+"Assets/Sensor.cs"
+"Assets/Spawner.cs"
+"Assets/Splitter.cs"
 "Assets/Windmill.cs"
 -langversion:9.0
 

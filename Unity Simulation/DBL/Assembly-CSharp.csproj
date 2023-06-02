@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/ConveyorBelt.cs" />
+    <Compile Include="Assets/Sensor.cs" />
+    <Compile Include="Assets/Spawner.cs" />
+    <Compile Include="Assets/Splitter.cs" />
     <Compile Include="Assets/Windmill.cs" />
   </ItemGroup>
   <ItemGroup>
