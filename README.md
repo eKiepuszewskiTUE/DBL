@@ -13,3 +13,4 @@ Thus, our team has created this specification for our robot:
 - Has an LCD screen that will display:
     - a counter showing the number of disks sorted
     - an error message for each seperate error being detected
+- Pushes any objects that are not the disks into the middle of the conveyor belt
