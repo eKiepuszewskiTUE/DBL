@@ -7,6 +7,13 @@ public class Sensor : MonoBehaviour
 
     // Update is called once per frame
 
+    private float delay;
+
+    private void Start()
+    {
+        delay = 2f;
+    }
+
     private void FixedUpdate()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward) * 10;
@@ -18,10 +25,11 @@ public class Sensor : MonoBehaviour
             Debug.Log(hit.collider.gameObject.tag);
             if (hit.collider.gameObject.tag == "BlackCube")
             {
-                Splitter.instance.rotation = false;
+                StartCoroutine(turnL(delay));
+                
             } else if (hit.collider.gameObject.tag == "WhiteCube")
             {
-                Splitter.instance.rotation = true;
+                StartCoroutine(turnR(delay));               
             }
 
         }
@@ -31,5 +39,18 @@ public class Sensor : MonoBehaviour
     {
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
         Debug.DrawRay(transform.position, forward, Color.green);
+    }
+
+
+    IEnumerator turnL(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Splitter.instance.rotation = false;
+    }
+
+    IEnumerator turnR(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Splitter.instance.rotation = true;
     }
 }

@@ -6,6 +6,7 @@ public class Splitter : MonoBehaviour
 {
 
     public bool rotation;
+    public float delay;
 
     public static Splitter instance;
     public void Awake()
@@ -23,7 +24,7 @@ public class Splitter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        delay = 10f;
     }
 
     // Update is called once per frame
