@@ -15,7 +15,7 @@ Thus, our team has created this specification for our robot:
 - Sorts black and white disks into different bins by:
     - detecting disk presence using light intensity measurement from an RGB sensor
     - detecting disk colour using RGB sensor
-    - using a windmill mechanism to push disk onto a ramp
+    - using a windmill mechanism to push disks onto a ramp
     - using a stick mechanism to push disk into correct bin
 - Only sorts every fourth disk detected
 - Has an LCD screen that will display:
