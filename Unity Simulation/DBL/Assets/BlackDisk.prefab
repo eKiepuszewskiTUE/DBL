@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5538422622629961295}
   - component: {fileID: 5538422622629961292}
   - component: {fileID: 5538422622629961293}
+  - component: {fileID: 719176976}
   m_Layer: 0
   m_Name: BlackDisk
   m_TagString: BlackCube
@@ -94,7 +95,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 5538422622629961298}
   m_Material: {fileID: 13400000, guid: 4983559238da3422fad78da75f1c83e0, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -115,3 +116,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!64 &719176976
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538422622629961298}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
