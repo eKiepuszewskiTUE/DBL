@@ -21,3 +21,6 @@ Thus, our team has created this specification for our robot:
 - Has an LCD screen that will display:
     - a counter showing the number of disks sorted
     - the color of each detected disk
+
+Credits:
+https://github.com/adafruit/Adafruit_CircuitPython_TCS34725 
