@@ -23,4 +23,5 @@ Thus, our team has created this specification for our robot:
     - the color of each detected disk
 
 Credits:
-https://github.com/adafruit/Adafruit_CircuitPython_TCS34725 
+- https://github.com/adafruit/Adafruit_CircuitPython_TCS34725 
+- https://stackoverflow.com/questions/9694165/convert-rgb-color-to-english-color-name-like-green-with-python 
