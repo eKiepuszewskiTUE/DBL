@@ -73,7 +73,7 @@ def motor_spin(direction, motor):
     motor : string, "1" for motor 1, "2" for motor 2, "both" for both motors. Motor "1" is splitter motor, motor "2" is windmill motor.
     '''
     
-    print("tocim sa vy kurvy")
+    #print("tocim sa")
     if (direction == "forward" and motor == "both"):
         GPIO.output(input1, True)
         GPIO.output(input2, False)
@@ -117,7 +117,7 @@ def motor_spin(direction, motor):
 
         GPIO.output(enable2, True)  
     else:
-        print("Invalid motor")
+        print("Invalid motor or direction.")
 
 wall_position = 'left'
 
@@ -201,6 +201,7 @@ def main():
     counter = 0
     lux = 0
     prev_lux = 0
+    sorted_counter = 0
     
     while True:
         color = sensor.color
@@ -217,26 +218,29 @@ def main():
         
         if (chceckIfDisk(lux, prev_lux)):
             counter += 1
-            #treba mat logiku iba na kazdy stvrty disk aby sa registroval 
-            sense_disk_time = datetime.datetime.now()
-            if (whatColorDisk(str(get_colour_name(color_rgb)[1])) == "black"):
-                move_wall("left")
-                print("som cierny a hybem stenu")
-            else:
-                move_wall("right")
-                print("som biely a hybem stenu")
+            #if (whatColorDisk(str(get_colour_name(color_rgb)[1])) == "white"):
+                #sleep(1.25)
+            #treba mat logiku iba na kazdy stvrty disk aby sa registroval
+            if counter % 4 == 1:
+                sorted_counter += 1
+                sense_disk_time = datetime.datetime.now()
+                if (whatColorDisk(str(get_colour_name(color_rgb)[1])) == "black"):
+                    move_wall("left")
+                    print("som cierny a hybem stenu")
+                else:
+                    move_wall("right")
+                    print("som biely a hybem stenu")
 
         try:
             if (datetime.datetime.now() - sense_disk_time).total_seconds() >= 0.75:
                 hit_disk()
                 del sense_disk_time 
-                print("som kokot227")
                 hit_time = datetime.datetime.now()
         except UnboundLocalError:
             pass
         
         try:
-            if (datetime.datetime.now() - hit_time).total_seconds() >= 1.75:
+            if (datetime.datetime.now() - hit_time).total_seconds() >= 1.25:
                 print("zastavujem koleso smrti")
                 pulse_width_modulation(0,2)
                 GPIO.output(enable2, False)
@@ -251,14 +255,14 @@ def main():
         except UnboundLocalError:
             pass
             
-            
+        print_text(3,0, "Sorted disks: "+str(sorted_counter))
         print_text(1, 0, "Counter: " + str(counter))
         print(counter)
 
         print_text(2, 0, "Disk: " + str(whatColorDisk(str(get_colour_name(color_rgb)[1]))))
         print(whatColorDisk(str(get_colour_name(color_rgb)[1])))
 
-        time.sleep(0.5)
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
